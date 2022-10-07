@@ -1,0 +1,24 @@
+.content__container {
+  display: grid;
+  width: 100vw;
+  grid-template-columns: 5fr 2fr;
+}
+
+.content__main {
+  height: 85vh;
+  display: grid;
+  grid-template-rows: 1.2fr 1fr;
+}
+
+.content__side {
+  height: 85vh;
+  border: 1px solid blue;
+}
+
+.content__main--days {
+  border: 1px solid red;
+}
+
+.content__main--details {
+  border: 1px solid yellow;
+}

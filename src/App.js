@@ -1,5 +1,16 @@
+import { Fragment } from "react";
+import Canvas from "./components/Canvas";
+import Content from "./layout/Content";
+import Header from "./layout/Header";
+
 function App() {
-  return <div className="App">Aplicatie cheala</div>;
+  return (
+    <Fragment>
+      <Canvas />
+      <Header />
+      <Content />
+    </Fragment>
+  );
 }
 
 export default App;
