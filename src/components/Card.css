@@ -1,0 +1,16 @@
+.content__day {
+  height: 25rem;
+  min-width: 15rem;
+  max-width: 90%;
+  background: rgba(27, 26, 29, 0.8);
+  border-radius: 1rem;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.selected__day {
+  background-color: rgba(188, 216, 236, 0.8);
+  flex-grow: 1;
+  transition: all 0.4s 0.1s;
+  color: #101015;
+}

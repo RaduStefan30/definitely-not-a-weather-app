@@ -1,13 +1,13 @@
 .content__container {
   display: grid;
   width: 100vw;
-  grid-template-columns: 5fr 2fr;
+  grid-template-columns: 4fr 1fr;
 }
 
 .content__main {
   height: 85vh;
   display: grid;
-  grid-template-rows: 1.2fr 1fr;
+  grid-template-rows: 1fr 1.2fr;
 }
 
 .content__side {
@@ -17,6 +17,11 @@
 
 .content__main--days {
   border: 1px solid red;
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  padding: 5rem;
+  justify-content: center;
 }
 
 .content__main--details {
