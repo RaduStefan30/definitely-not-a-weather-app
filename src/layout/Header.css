@@ -4,8 +4,14 @@
   justify-items: center;
   margin-top: 4rem;
   font-size: 3.2rem;
+  gap: 2rem;
 }
 
 .header__text {
   display: inline-block;
+}
+
+.header__icon {
+  height: 2.4rem;
+  margin-right: 2rem;
 }

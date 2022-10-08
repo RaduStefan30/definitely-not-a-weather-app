@@ -1,0 +1,19 @@
+.header__hourly {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.content__hourly {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  align-items: center;
+}
+
+.hour__select {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+}

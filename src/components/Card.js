@@ -1,12 +1,19 @@
-import { useEffect, useState } from "react";
 import "./Card.css";
+import BigCard from "./BigCard";
+import SmallCard from "./SmallCard";
 
 const Card = (props) => {
-  const { day } = props;
+  const { day, details, onClick, classes } = props;
+
+  const content = classes.includes("selected__day") ? (
+    <BigCard day={day} details={details} />
+  ) : (
+    <SmallCard day={day} details={details} />
+  );
 
   return (
-    <div onClick={props.onClick} className={props.classes}>
-      {day}
+    <div onClick={onClick} className={classes}>
+      {content}
     </div>
   );
 };

@@ -3,21 +3,32 @@ import axios from "axios";
 
 const initialState = {
   city: "",
+  days: [],
   suggestions: [],
+  details: [],
+  day: undefined,
+  dayDetails: undefined,
 };
 
 const weatherSlice = createSlice({
   name: "weather",
   initialState,
   reducers: {
-    changeWeather(state, action) {
+    getWeather(state, action) {
       state.city = action.payload.city;
+      state.days = action.payload.days;
+      state.details = action.payload.details;
     },
     changeSuggestions(state, action) {
       state.suggestions = action.payload.suggestions;
     },
     removeSuggestions(state, action) {
       state.suggestions = [];
+    },
+    changeDay(state, action) {
+      state.day = action.payload.day;
+      const details = state.details.filter((item) => item.date === state.day);
+      state.dayDetails = details[0];
     },
   },
 });
@@ -26,7 +37,7 @@ export const fetchWeatherData = (searchText = "London") => {
   return async (dispatch) => {
     const fetchData = async () => {
       const response = await axios(
-        `https://api.weatherapi.com/v1/forecast.json?key=02043fb233904559812103820220610&q=${searchText}&days=8&aqi=yes&alerts=no`
+        `https://api.weatherapi.com/v1/forecast.json?key=02043fb233904559812103820220610&q=${searchText}&days=7&aqi=yes&alerts=no`
       );
       if (response.status !== 200) {
         throw new Error("Could not fetch weather data!");
@@ -36,9 +47,16 @@ export const fetchWeatherData = (searchText = "London") => {
 
     try {
       const data = await fetchData();
+      const days = data.forecast.forecastday.map((day) => {
+        const date = new Date(day.date);
+        return date.toLocaleDateString("en-EN", { weekday: "long" });
+      });
+
       dispatch(
-        weatherSlice.actions.changeWeather({
-          city: data.location.name,
+        weatherSlice.actions.getWeather({
+          city: data.location.name + ", " + data.location.country,
+          days,
+          details: data.forecast.forecastday,
         })
       );
     } catch (err) {
@@ -63,7 +81,6 @@ export const fetchSuggestions = (searchText = "London") => {
       if (response.status !== 200) {
         throw new Error("Could not fetch weather data!");
       }
-      console.log(response.data);
       return response.data;
     };
 

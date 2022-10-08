@@ -1,29 +1,28 @@
 .content__container {
   display: grid;
-  width: 100vw;
-  grid-template-columns: 4fr 1fr;
+  width: 90wv;
+  grid-template-columns: 1.2fr 1.2fr;
+  margin: 5rem;
+  gap: 4rem;
 }
 
 .content__main {
-  height: 85vh;
   display: grid;
-  grid-template-rows: 1fr 1.2fr;
-}
-
-.content__side {
-  height: 85vh;
-  border: 1px solid blue;
+  grid-template-rows: 1fr 1fr;
+  margin-top: -2rem;
 }
 
 .content__main--days {
-  border: 1px solid red;
   display: flex;
   gap: 3rem;
   align-items: center;
-  padding: 5rem;
+  padding: 3rem 5rem;
   justify-content: center;
 }
+.content__main--astro {
+  padding: 5rem 8rem;
+}
 
-.content__main--details {
-  border: 1px solid yellow;
+.content__side {
+  margin-top: 2.5rem;
 }

@@ -1,0 +1,45 @@
+.card--big {
+  display: grid;
+  grid-template-rows: 1fr 4fr;
+  padding: 2rem;
+}
+
+.card__header--big {
+  align-self: center;
+  justify-self: center;
+  font-size: 3rem;
+  padding: 1rem 2rem;
+}
+
+.card__content--big {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 1rem 2rem;
+}
+
+.card__temp--big {
+  text-align: center;
+  display: block;
+  font-size: 6rem;
+  margin-bottom: 2rem;
+}
+
+.card__icon--big {
+  margin-top: -2rem;
+  height: 12rem;
+  width: 12rem;
+}
+
+.card__text {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  min-width: 12rem;
+}
+.card__label {
+  color: rgb(87, 104, 119);
+}
+
+.card__content--left {
+  display: flex;
+  flex-direction: column;
+}

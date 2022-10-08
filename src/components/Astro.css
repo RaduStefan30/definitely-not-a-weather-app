@@ -1,0 +1,27 @@
+.astro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  height: 100%;
+}
+
+.astro > div {
+  background: rgba(27, 26, 29, 0.6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 1rem;
+  border-radius: 1rem;
+}
+
+.astro__image {
+  height: 15rem;
+  width: 15rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.astro__text {
+  font-size: 1.8rem;
+  margin-top: 2rem;
+}

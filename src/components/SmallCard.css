@@ -1,0 +1,33 @@
+.card--small {
+  display: grid;
+  grid-template-rows: 1fr 4fr;
+  padding: 2rem;
+  align-items: center;
+  justify-items: center;
+}
+
+.card__header--small {
+  font-size: 2.2rem;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #555;
+}
+
+.card__content--small {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.card__text--small {
+  text-align: center;
+  display: block;
+  font-size: 3.2rem;
+}
+
+.card__icon--small {
+  height: 7rem;
+  width: 7rem;
+}
