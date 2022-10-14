@@ -8,14 +8,13 @@ import {
   weatherActions,
   fetchWeatherData,
   fetchSuggestions,
-} from "../store/weather";
+} from "../../store/weather";
 
 const Search = () => {
-  const suggestions = useSelector((state) => state.weather.suggestions);
   const dispatch = useDispatch();
+  const suggestions = useSelector((state) => state.weather.suggestions);
 
   const [searchText, setSearchText] = useState("London");
-  // const [searchItems, setSearchItems] = useState();
 
   const inputField = useRef();
 
@@ -68,7 +67,7 @@ const Search = () => {
               onClick={() => handleClick(item.name)}
               onChange={() => handleChange(item.name)}
             >
-              {item.name}, {item.region.length < 15 && item.region + ","}{" "}
+              {item.name}, {item.region.length < 10 && item.region + ","}{" "}
               {item.country}
             </div>
           ))}

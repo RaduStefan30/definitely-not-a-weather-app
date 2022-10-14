@@ -1,8 +1,7 @@
 .content__day {
   height: 25rem;
   min-width: 10rem;
-
-  background: rgba(27, 26, 29, 0.6);
+  background: rgba(27, 26, 29, 0.7);
   border-radius: 1rem;
   transition: all 0.4s;
   cursor: pointer;

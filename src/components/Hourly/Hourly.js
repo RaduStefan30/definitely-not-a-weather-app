@@ -5,10 +5,10 @@ import "./Hourly.css";
 
 const Hourly = () => {
   const { dayDetails } = useSelector((state) => state.weather);
-  const [isAM, setIsAM] = useState("AM");
+  const [timeOfDay, setTimeOfDay] = useState("AM");
 
   const toggleTime = (e) => {
-    setIsAM(e);
+    setTimeOfDay(e);
   };
 
   return (
@@ -29,11 +29,11 @@ const Hourly = () => {
         {dayDetails &&
           dayDetails.hour.map((hour) => {
             const time = new Date(hour.time);
-            if (isAM === "AM" && time.getHours() < 12)
+            if (timeOfDay === "AM" && time.getHours() < 12)
               return (
                 <HourCard hour={hour} key={hour.time} time={time.getHours()} />
               );
-            else if (isAM === "PM" && time.getHours() >= 12)
+            else if (timeOfDay === "PM" && time.getHours() >= 12)
               return (
                 <HourCard hour={hour} key={hour.time} time={time.getHours()} />
               );

@@ -1,8 +1,7 @@
-import Moment from "react-moment";
 import "./Content.css";
-import Cards from "../components/Cards";
-import Astro from "../components/Astro";
-import Hourly from "../components/Hourly";
+import Cards from "../../components/Cards/Cards";
+import Astro from "../../components/Astro/Astro";
+import Hourly from "../../components/Hourly/Hourly";
 
 const Content = () => {
   return (

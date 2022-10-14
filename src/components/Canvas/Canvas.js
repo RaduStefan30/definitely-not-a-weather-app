@@ -29,14 +29,14 @@ const Canvas = () => {
       this.x = mouse.x;
       this.y = mouse.y;
       this.size = Math.random() * 3;
-      this.speedX = Math.random() * 2 - 1;
-      this.speedY = Math.random() * 2 - 1;
-      this.color = `hsl(${hue},40%,75%)`;
+      this.speedX = Math.random() * 3 - 1;
+      this.speedY = Math.random() * 3 - 1;
+      this.color = `hsl(${hue},20%,85%)`;
     }
     Particle.prototype.update = function () {
       this.x += this.speedX;
       this.y += this.speedY;
-      if (this.size > 0.1) this.size -= 0.02;
+      if (this.size > 0.1) this.size -= 0.05;
     };
     Particle.prototype.draw = function () {
       ctx.fillStyle = this.color;
@@ -54,7 +54,7 @@ const Canvas = () => {
           const dy = particleArray[i].y - particleArray[j].y;
           const distance = Math.sqrt(dx * dx + dy * dy);
 
-          if (distance < 100) {
+          if (distance < 60) {
             ctx.beginPath();
             ctx.strokeStyle = particleArray[i].color;
             ctx.lineWidth = particle.size / 20;

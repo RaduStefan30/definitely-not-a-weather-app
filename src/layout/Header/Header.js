@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import "./Header.css";
 import { BsFillPinMapFill } from "react-icons/bs";
 
-import Search from "../components/Search";
+import Search from "../../components/Search/Search";
 
 const Header = () => {
   const { city } = useSelector((state) => state.weather);

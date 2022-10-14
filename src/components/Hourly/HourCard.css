@@ -1,7 +1,4 @@
 .hour__card--side {
-  min-width: 18rem;
-  min-height: 20rem;
-  border-radius: 1rem;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -9,10 +6,13 @@
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   overflow: hidden;
+  align-items: center;
   position: absolute;
   top: 0;
   left: 0;
-  align-items: center;
+  min-width: 18rem;
+  min-height: 20rem;
+  border-radius: 1rem;
 }
 
 .hour__card {
@@ -20,9 +20,8 @@
   min-height: 20rem;
   perspective: 150rem;
   -moz-perspective: 150rem;
-  position: relative;
-  width: 100%;
-  margin: 1.6rem 1.2rem;
+  margin: 1rem 1rem;
+  border-radius: 1rem;
 }
 
 .hour__card--front {
@@ -32,7 +31,7 @@
 }
 .hour__card--back {
   transform: rotateY(180deg);
-  background-color: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.8);
   color: #101015;
   padding: 1rem;
   gap: 0.2rem;
@@ -44,8 +43,4 @@
 
 .hour__card:hover .hour__card--back {
   transform: rotateY(0);
-}
-
-.hour__card:hover .hour__card--side {
-  box-shadow: 0px 1px 5px 1px rgba(255, 255, 255, 0.3);
 }

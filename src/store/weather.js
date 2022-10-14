@@ -64,7 +64,7 @@ export const fetchWeatherData = (searchText = "London") => {
       //     notificationActions.showNotification({
       //       status: "error",
       //       title: "Error!",
-      //       message: "Fetching cart data failed!",
+      //       message: "Fetching data failed!",
       //     })
       //   );
       console.log(err);
@@ -100,7 +100,7 @@ export const fetchSuggestions = (searchText = "London") => {
       //     notificationActions.showNotification({
       //       status: "error",
       //       title: "Error!",
-      //       message: "Fetching cart data failed!",
+      //       message: "Fetching data failed!",
       //     })
       //   );
       console.log(err);

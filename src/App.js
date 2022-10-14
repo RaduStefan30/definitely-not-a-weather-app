@@ -1,7 +1,7 @@
 import { Fragment } from "react";
-import Canvas from "./components/Canvas";
-import Content from "./layout/Content";
-import Header from "./layout/Header";
+import Canvas from "./components/Canvas/Canvas";
+import Content from "./layout/Content/Content";
+import Header from "./layout/Header/Header";
 
 function App() {
   return (
