@@ -1,22 +1,13 @@
 @media screen and (max-width: 103.5rem) {
   .content__container {
-    gap: 3rem;
-    margin: 5rem 2rem;
+    grid-template-columns: 1fr;
+    justify-items: center;
   }
 }
 
 @media screen and (max-width: 97rem) {
   html {
     font-size: 56.25%;
-  }
-  .content__container {
-    gap: 0;
-  }
-  .content__container {
-    display: grid;
-    width: 90wv;
-    grid-template-columns: 1.2fr 1.5fr;
-    gap: 3rem;
   }
   .content__main--days {
     padding: 3rem 2rem;
@@ -41,11 +32,6 @@
 }
 
 @media screen and (max-width: 80rem) {
-  .content__container {
-    grid-template-columns: 1fr;
-    margin: 5rem 2rem;
-    justify-items: center;
-  }
   .header {
     display: flex;
     flex-direction: column-reverse;

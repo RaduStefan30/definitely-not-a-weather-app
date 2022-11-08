@@ -22,7 +22,7 @@ const weatherSlice = createSlice({
     changeSuggestions(state, action) {
       state.suggestions = action.payload.suggestions;
     },
-    removeSuggestions(state, action) {
+    removeSuggestions(state) {
       state.suggestions = [];
     },
     changeDay(state, action) {

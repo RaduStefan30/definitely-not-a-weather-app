@@ -12,9 +12,12 @@ import {
 
 const Search = () => {
   const dispatch = useDispatch();
+
   const suggestions = useSelector((state) => state.weather.suggestions);
 
-  const [searchText, setSearchText] = useState("London");
+  const [searchText, setSearchText] = useState(
+    localStorage.getItem("search") || "Cluj-Napoca"
+  );
 
   const inputField = useRef();
 
@@ -26,14 +29,20 @@ const Search = () => {
     e.preventDefault();
     setSearchText(inputField.current.value);
     dispatch(fetchWeatherData(searchText));
-    dispatch(weatherActions.removeSuggestions());
+    setAndReset();
   };
 
   const handleClick = (e) => {
     setSearchText(e);
     dispatch(fetchWeatherData(e));
-    inputField.current.value = e;
+    setAndReset();
+  };
+
+  const setAndReset = () => {
+    if (suggestions.length === 0) return;
+    localStorage.setItem("search", searchText);
     dispatch(weatherActions.removeSuggestions());
+    inputField.current.value = "";
   };
 
   const handleChange = (e) => {
