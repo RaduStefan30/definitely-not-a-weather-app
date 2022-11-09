@@ -2,20 +2,21 @@
   display: grid;
   width: 90wv;
   grid-template-columns: 1.2fr 1.2fr;
-  margin: 8rem 2rem 0rem;
+  margin: 8rem 0;
 }
 
 .content__main {
   display: grid;
   grid-template-rows: 1fr 0.5fr;
-  margin: 8rem 12rem;
 }
 
 .content__main--days {
   display: flex;
   gap: 3rem;
   align-items: center;
+  justify-content: center;
 }
 .content__main--astro {
-  padding: 0 2rem;
+  justify-self: center;
+  width: 60%;
 }

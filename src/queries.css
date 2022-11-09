@@ -50,6 +50,11 @@
     font-size: 45%;
   }
 
+  .content__main--astro {
+    justify-self: center;
+    width: 70%;
+  }
+
   html {
     font-size: 50%;
   }

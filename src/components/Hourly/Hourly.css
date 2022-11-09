@@ -6,7 +6,7 @@
 }
 
 .content__hourly {
-  margin-top: 3rem;
+  margin-top: 3rem 4rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   justify-items: center;
